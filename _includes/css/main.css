@@ -260,6 +260,8 @@ nav ul li:hover, nav ul li.active {
 
 
 /* ----- fork on github banner ----- */
+
+/* -----
 #forkongithub a {
   color:#fff;
   text-decoration:none;
@@ -302,7 +304,7 @@ nav ul li:hover, nav ul li.active {
     box-sizing: content-box;
   }
 }
-
+----- */
 
 
 /* mid size (tablets, landscapes) */
