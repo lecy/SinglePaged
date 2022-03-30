@@ -1,7 +1,7 @@
 
 <br><br><br>
 
-![](img/ui-logo-rgb-white.svg)
+<img src="img/ui-logo-rgb-white.svg" alt="Urban Institute" width="300">
 
 <hr>
 <br>
