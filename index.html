@@ -2,7 +2,12 @@
 ---
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="site.js"></script>
+	
+	
 <head>
+	
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ site.title }}</title>
@@ -12,14 +17,14 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
-  
-	
-	
+
 </head>
+	
 <body>
   <div id="main">
 
     <nav>
+	    
       <br>
       <div style="text-align:center">
 	      
@@ -29,15 +34,15 @@
 	      
       </div>
       <br>
+  
+      <ul>
+        {% for node in site.posts reversed %}
+          {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
+          <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
+        {% endfor %}
+      </ul>
 	    
-	    
-	    
-    <ul>
-      {% for node in site.posts reversed %}
-        {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
-      {% endfor %}
-    </ul></nav>
+    </nav>
 
 
     {% for page in site.posts reversed %}
@@ -70,10 +75,11 @@
         {{ foottext | markdownify }}
       </div>
     </div>
+	  
+	  
   </div>
 
 {% include analytics.html %}
+	
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="site.js"></script>
 </html>
