@@ -4,7 +4,7 @@
 <hr>
 <br>
 
-<img src="img/footer.png" alt="Urban Institute" width="300">
+<img src="img/footer.png" alt="Urban Institute" width="100%">
 
 <br>
 <hr> 
